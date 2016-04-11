@@ -1,0 +1,222 @@
+/* ----------------------------------------- SASS ---------------------------------------------------- */
+.basic_text, p, h1, h2, a, table.cv tr td {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  color: #3f4142; }
+
+/* ----------------------------------------- COMMON TAGS ---------------------------------------------------- */
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  background: -webkit-linear-gradient(#949697, #d5d7d6) no-repeat center center fixed;
+  background: -o-linear-gradient(#949697, #d5d7d6) no-repeat center center fixed;
+  background: -moz-linear-gradient(#949697, #d5d7d6) no-repeat center center fixed;
+  background: linear-gradient(#949697, #d5d7d6) no-repeat center center fixed; }
+
+img {
+  margin: 0px;
+  padding: 0px;
+  border: none; }
+
+p {
+  margin: 0px;
+  padding: 0px 0px 16px 0px;
+  line-height: 19px; }
+
+h1 {
+  margin: 0px;
+  padding: 0px 0px 27px 0px;
+  line-height: 19px;
+  font-size: 1.6em;
+  letter-spacing: 1.6px; }
+
+h2 {
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  line-height: 19px;
+  font-size: 1.3em;
+  letter-spacing: 1.6px; }
+
+a {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  text-decoration: underline;
+  color: #06559f; }
+
+/* ----------------------------------------- CONTAINER, HEADER & NAV ---------------------------------------------------- */
+#container {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+
+nav {
+  width: 100%;
+  margin: 0px;
+  background-image: url(../images/nav_background_small.jpg);
+  background-size: contain; }
+  nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li a {
+        padding: 0.2em;
+        font-family: arial;
+        font-size: 0.9em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #3f4142;
+        text-decoration: none;
+        -webkit-transition: All 0.3s;
+        /* For chrome & safari */
+        -moz-transition: All 0.3s;
+        /* For mozilla firefox */
+        -o-transition: All 0.3s;
+        /* For opera */
+        transition: All 0.3s;
+        /* Not yet implemented, but will be available soon */ }
+      nav ul li a:hover {
+        background: white;
+        /* rollback */
+        background: rgba(255, 255, 255, 0.7); }
+      nav ul li a img {
+        width: 14%; }
+    nav ul li:hover > ul {
+      opacity: 1; }
+    nav ul ul {
+      position: absolute;
+      top: 32px;
+      z-index: 100;
+      opacity: 0;
+      /* Hide sub level */
+      -webkit-transition: opacity 0.3s ease-in-out;
+      /* For chrome & safari */
+      -moz-transition: opacity 0.3s ease-in-out;
+      /* For mozilla firefox */
+      -o-transition: opacity 0.3s ease-in-out;
+      /* For opera */
+      transition: opacity 0.3s ease-in-out;
+      /* Not yet implemented, but will be available soon */ }
+      nav ul ul li a {
+        width: 120px;
+        height: 22px;
+        background: #e1e0db;
+        /* rollback */
+        background: rgba(225, 224, 219, 0.9);
+        border-top: solid 1px #adadad; }
+      nav ul ul li a:hover {
+        background: white;
+        background: rgba(255, 255, 255, 0.8); }
+
+.flag_a img, .flag_b img {
+  width: 70%; }
+
+li.flag_a {
+  padding-left: 7%; }
+
+.flag_b a {
+  margin: 0px; }
+
+.flag_a, .flag_b {
+  opacity: 0.4; }
+
+.flag_a:hover, .flag_b:hover {
+  opacity: 0.9; }
+
+/* ----------------------------------------- MAIN ---------------------------------------------------- */
+#section_main {
+  padding-right: 1em;
+  background-image: url(../images/main_background.jpg);
+  background-size: contain; }
+
+#section_main_left, #section_main_right {
+  width: 100%;
+  padding-top: 1em; }
+
+#section_main_left {
+  text-align: center;
+  padding-bottom: 1em; }
+
+#section_main_right {
+  text-align: left;
+  padding-left: 0.5em; }
+
+/* ----------------------------------------- FOOTER ---------------------------------------------------- */
+footer {
+  clear: both;
+  width: 100%;
+  height: 26px;
+  float: left;
+  background-image: url(../images/footer_background.jpg);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  /* top right bottom left */ }
+  footer p, footer a {
+    font-size: 11px;
+    color: #707070; }
+  footer a {
+    opacity: 0.7;
+    color: #3b3b3b; }
+    footer a img {
+      box-shadow: 1px 1px 1px #8e9091; }
+  footer a:hover {
+    opacity: 1.0; }
+  footer a:visited {
+    opacity: 0.7; }
+
+#section_footer_left {
+  display: none; }
+
+#section_footer_center {
+  display: none; }
+
+#section_footer_right {
+  text-align: right;
+  width: 96%;
+  padding: 1px 2px 0px 0px;
+  /* top right bottom left */ }
+  #section_footer_right img {
+    vertical-align: middle; }
+
+/* ----------------------------------------- PAGES ---------------------------------------------------- */
+#portfolio_main {
+  text-align: center;
+  padding: 10px 0px 10px 0px; }
+
+.portfolio {
+  width: 900px;
+  height: 427px; }
+
+.omakuva {
+  box-shadow: 2px 4px 9px #8e9091; }
+
+#section_main.cv {
+  padding: 1em; }
+
+table.cv tr td {
+  margin: 0px;
+  padding: 0px 15px 16px 0px;
+  /* top right bottom left */
+  line-height: 19px;
+  vertical-align: top; }
+table.cv tr td.cv_topic {
+  display: none; }
+table.cv tr td.research_topic {
+  display: none; }
+table.cv tr td.cv_item {
+  display: none; }
+table.cv tr td.cv_content {
+  width: 59%; }
+table.cv tr tr.topic_small {
+  font-size: 1.1em; }
+table.cv tr tr.item_small {
+  font-size: 0.9em; }
+
+.updateinfo {
+  display: none; }
