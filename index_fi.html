@@ -3,111 +3,78 @@
 	<head id="hedi">
 		<title>Kimmo Pyh&auml;lt&ouml;</title>
 		<link rel="shortcut icon" href="ikoni1.ico" >
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8">
 		<meta name="keywords" content="portfolio, Kimmo, Pyh&auml;lt&ouml;, gimmo, gimmo.net" />
 		<meta name="description" content="Pyh&auml;lt&ouml;" />
+		<meta name="author" content="Kimmo, Pyh&auml;lt&ouml;">
 		
 		<link rel="stylesheet" media="screen and (max-width: 1023px)" href="css/screen_small.css">
 		<link rel="stylesheet" media="screen and (min-width: 1024px)" href="css/screen.css">
 				
-		<!--<link id="stylesheet" rel="stylesheet" href="css/screen.css" />-->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-		<![endif]--> 
-		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script type="text/javascript" src="js/responsives.js"></script>
-	
-		
+		<script type="text/javascript" src="js/basic_functions.js"></script>
+				
 	</head>
 	
 	<body>
 		<div id="container">
 			<header>
+				
+				<nav id="nav_mobile">
+					<a href="#" id="indexc_fi" class="Button_MainMenuSelector"><img id="arrowRotate" src="images/arrow_down.png" data-swap="images/arrow_right.png" data-src="images/arrow_down.png"> Valikko</a>
+					
+					<a href="index_fi.html" class="flag" title="In Finnish"><img src="images/ico_flag_fin.png" alt="In Finnish"></a>
+					<a href="index.html" class="flag" title="In English"><img src="images/ico_flag_en.png" alt="In English"></a>
+					
+					<div class="Mobile_menu">
+						<ul>
+							<li>
+								<a href="#" id="indexc_fi" class="Button_MainMenu">Etusivu</a>
+							</li>
+							<li>
+								<a href="#" id="cv_fi" class="Button_MainMenu">CV</a>
+							</li>
+							<li>
+								<a href="files/Portfolio_Kimmo_Pyhalto_en.pdf" target="_blank" title="My portfolio">Portfolio</a>
+							</li>
+							<li>
+								<a href="#" id="tutkimus" class="Button_MainMenu">Tutkimus</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div id="MainHeading">
+					<h1>Gimmo.net<br/><u>Kimmo Pyh&auml;lt&ouml;</u></h1>	
+				</div>
+				
 				<nav id="nav">
 	       	<ul>
-	        		<!--<li><a href="index_fi.shtml">Etusivu</a></li>-->
-	        		
-	        		<li><a href="#" onclick="LoadContent('index_fi.html',151)">Etusivu</a></li>
-	        	
-	        		<!--<li><a href="cv_fi.shtml" title="Curriculum Vitae">CV</a></li>-->
-	        	
-	        		<li><a href="#" onclick="LoadContent('cv_fi.html')">CV</a></li>
-	        	
+	        		<li><a href="#" id="indexc_fi" class="Button_MainMenu">Etusivu</a></li>
+	        		<li><a href="#" id="cv_fi" class="Button_MainMenu">CV</a></li>
 	        		<li><a href="files/Portfolio_Kimmo_Pyhalto_fi.pdf" target="_blank">Portfolio <img src="images/icon_pdf.gif" alt="Portfolio pdf-muodossa"></a></li>
-	        		
-	        		<!--<li><a href="tutkimus.shtml">Tutkimus</a></li>-->
-							
-							<li><a href="#" onclick="LoadContent('tutkimus.html',18)">Tutkimus</a></li>
-							
+	        		<li><a href="#" id="tutkimus" class="Button_MainMenu">Tutkimus</a></li>
 							<li class="flag_a" style="opacity:0.7;"><a href="index_fi.html" title="Suomeksi"><img src="images/ico_flag_fin.png" alt="Suomeksi"></a></li>
 	        		<li class="flag_b"><a href="index.html" title="In English"><img src="images/ico_flag_en.png" alt="In English"></a></li>
 	        	</ul>
     	  </nav>
       </header>
 				
+			<div id="conti_container"></div>
 
-
-				
-				
-				<div id="conti_container">
-				
-				<div id="updateinfo" class="updateinfo">Sivu p&auml;ivitetty 4.1.2016</div>
-				
-				
-				
-				<section id="section_main">
-					<section id="section_main_left">
-						<img src="images/omakuva.jpg" alt="Omakuva" class="omakuva">
-					</section>
-					<section id="section_main_right">
-						<p>
-							Olen 37-vuotias teknologian ja digitaalisen median moniosaaja 
-							Tampereelta. Koulutukseltani olen filosofian maisteri (Human-Technology Interaction), medianomi (vuorovaikutteisuuden suunnittelu), sek&auml; tietotekniikan mekaanikko. Erikoisalaani ovat k&auml;ytett&auml;vyyden ja k&auml;ytt&auml;j&auml;kokemuksen
-							 tutkimus ja suunnittelu, sek&auml; verkkopohjaisten 
-							palveluiden toteutus.
-						</p>
-						<p>
-							Vuosikymmenen ty&ouml;kokemus IT-alalla on tuonut kokonaisymm&auml;rryksen tiedon hallinnasta, k&auml;sittelyst&auml; ja 
-							esitt&auml;misest&auml; kokonaisuuden eri osapuolille.
-							Prosessi-, k&auml;ytett&auml;vyys- ja verkko-ohjelmointitaitojen lis&auml;ksi
-							my&ouml;s rautapuoli on vahvasti hallussa. 
-						</p>
-						<p>
-							T&auml;ll&auml; hetkell&auml; toimin vierailevana Fulbright-v&auml;it&ouml;skirjatutkijana Case Western Reserve -yliopistossa (Cleveland, Yhdysvallat). V&auml;it&ouml;skirjani k&auml;sittelee ik&auml;ihmisi&auml; ja verkkopalveluiden k&auml;ytett&auml;vyytt&auml;.
-							
-							<!--
-							T&auml;ll&auml; hetkell&auml; toimin v&auml;it&ouml;skirjatutkijana Tampereen Yliopistossa. V&auml;it&ouml;skirjani k&auml;sittelee ik&auml;ihmisi&auml; ja verkkopalveluiden k&auml;ytett&auml;vyytt&auml;.
-							-->
-							
-						</p>
-						
-					</section>
-				</section>
-				
-			</div>
-	
-
-
-					<footer id="footer">
-				<section id="section_footer_left">
-						<p>2016 &copy; Kimmo Pyh&auml;lt&ouml; </p>
-					</section>
-				<section id="section_footer_center">
+			<footer id="footer">
+				<div id="section_footer_left">
+					<p>2016 &copy; Kimmo Pyh&auml;lt&ouml; </p>
+				</div>
+				<div id="section_footer_center">
 					<p id="updated"></p>
-					<script>
-						var updateinfo = $('#updateinfo');
-						var title = updateinfo.html();
-						var updated = $('#updated');
-						updated.append(title);
-					</script>
-				</section>
-				<section id="section_footer_right">
+				</div>
+				<div id="section_footer_right">
 						<a href="mailto:kimmo.pyhalto@gmail.com">kimmo.pyhalto[&auml;t]gmail.com</a>
 					 	<a href="http://fi.linkedin.com/pub/kimmo-pyh%C3%A4lt%C3%B6/62/7b2/18b" target="_blank" title="LinkedIn-profiilini"><img src="images/ico_linkedln.png" alt="LinkedIn-profiili"></a>	
 					 	<a href="https://plus.google.com/+KimmoPyh%C3%A4lt%C3%B6" target="_blank" title="Google+-profiilini"><img src="images/ico_google_plus.png" alt="Google+-profiili"></a>
 					 	<a href="https://www.facebook.com/kimmo.pyhalto" target="_blank" title="Facebook-profiilini"><img src="images/ico_facebook.png" alt="Facebook-profiili"></a>
-					</section>
+					</div>
 			</footer>
 		</div>
 	

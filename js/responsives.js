@@ -14,8 +14,8 @@ window.onload = function() {
 	var FileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	var sHeight = window.innerHeight;
 	var sHeight = sHeight - 25;
-	var foot = $('#footer');
-	var cssfile = $('#css_file');
+	var foot = jq('#footer');
+	var cssfile = jq('#css_file');
 	var footHomeY = foot.offset().bottom;
 
 	//Keep footer at the bottom of the page
@@ -27,11 +27,12 @@ window.onload = function() {
 		}
 
 	//If the front page page is not higher than window, we must stretch is. Also extra style changes depending on width and language.
-	if (FileName == 'index.shtml' || FileName == 'index_fi.shtml' || FileName == 'tutkimus.shtml') {
+	if (FileName == 'index.html' || FileName == 'index_fi.html' || FileName == 'tutkimus.html') {
 		if (sWidth > 1023) {
 			var sHeight = sHeight-155;
-			if (FileName == 'cv_fi.shtml' || FileName == 'index_fi.shtml') {
-				var nav = $('#nav');
+			if (FileName == 'cv_fi.shtml' || FileName == 'index_fi.html') {
+				var nav = jq('#nav');
+				
 	  		nav.css({
     		'padding-left': 196,
       	width: 828
@@ -41,16 +42,18 @@ window.onload = function() {
 			else {
 				var sHeight = sHeight+500;
 				}
-			var frontpage = $('#section_main');
+			var frontpage = jq('#section_main');
 	  	frontpage.css({
 	  		height: +sHeight
 	    	});
 	  	}
 	 
 	 //Extra styling for finnish side
-	if (FileName == 'cv_fi.shtml' || FileName == 'tutkimus.shtml' && sWidth > 1023) {
-		var nav = $('#nav');
+	 
+	if (FileName == 'index_fi.html' || FileName == 'tutkimus.shtml' && sWidth > 1023) {
+		var nav = jq('#nav');
 	  nav.css({
+	  	
     	'padding-left': 196,
       width: 828
       });
@@ -59,11 +62,11 @@ window.onload = function() {
 
 /*------------------- When scrolling, make the navigation stop on the top of the window ---------------------*/
 $(function() {
-	var nav = $('#nav');
+	var nav = jq('#nav');
 	var navHomeY = nav.offset().top;
 	var navHomeY = navHomeY;
   var isFixed = false;
-  var $w = $(window);
+  var $w = jq(window);
   $w.scroll(function() {
   	var scrollTop = $w.scrollTop();
     var shouldBeFixed = scrollTop > navHomeY;
@@ -84,8 +87,4 @@ $(function() {
  	});
  
 
-/*------------------- AJAX loader for the pages ---------------------*/
- function LoadContent(page,extraheight){
- 	$("#conti_container").load(page);
-	}
 

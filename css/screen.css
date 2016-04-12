@@ -70,11 +70,14 @@ header {
   background-image: url(../images/header_background4_aut.jpg);
   padding-top: 147px; }
 
+#nav_mobile, #MainHeading {
+  display: none; }
+
 nav {
-  padding-top: 6px;
+  padding-top: 1px;
   padding-left: 162px;
   width: 862px;
-  height: 28px;
+  height: 32px;
   margin: 0px;
   background-image: url(../images/nav_background3_aut.jpg); }
   nav ul {
@@ -83,11 +86,14 @@ nav {
     list-style: none; }
     nav ul li {
       display: inline-block; }
-      nav ul li a {
-        height: 28px;
+      nav ul li a, nav ul li button {
+        display: block;
+        height: 27px;
         margin-left: 8px;
-        padding: 6px;
-        font-family: helvetica;
+        margin-top: 0px;
+        padding: 3px 6px 0px 6px;
+        /* top right bottom left */
+        font-family: arial;
         font-size: 18px;
         letter-spacing: 2px;
         color: #2e3132;
@@ -97,9 +103,7 @@ nav {
         -moz-transition: All 0.3s;
         /* For mozilla firefox */
         -o-transition: All 0.3s;
-        /* For opera */
-        transition: All 0.3s;
-        /* Not yet implemented, but will be available soon */ }
+        /* For opera */ }
       nav ul li a:hover {
         background: white;
         /* rollback */
@@ -107,6 +111,7 @@ nav {
     nav ul li:hover > ul {
       opacity: 1; }
     nav ul ul {
+      /*  Sub level ul  */
       position: absolute;
       top: 32px;
       /* display: block; */
@@ -118,9 +123,7 @@ nav {
       -moz-transition: opacity 0.3s ease-in-out;
       /* For mozilla firefox */
       -o-transition: opacity 0.3s ease-in-out;
-      /* For opera */
-      transition: opacity 0.3s ease-in-out;
-      /* Not yet implemented, but will be available soon */ }
+      /* For opera */ }
       nav ul ul li a {
         /* display: block; */
         width: 120px;
@@ -132,6 +135,14 @@ nav {
       nav ul ul li a:hover {
         background: white;
         background: rgba(255, 255, 255, 0.8); }
+
+.link_hover {
+  background: white;
+  /* rollback */
+  background: rgba(255, 255, 255, 0.7); }
+
+.link_inactive {
+  background: none; }
 
 .flag_a {
   padding-left: 330px; }

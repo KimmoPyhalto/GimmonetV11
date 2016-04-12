@@ -14,7 +14,6 @@ $pri-fc: #2e3132; //#3f4142
 	-webkit-transition: $trans1; /* For chrome & safari */
 	-moz-transition: $trans1; /* For mozilla firefox */
 	-o-transition: $trans1; /* For opera */
-	transition: $trans1; /* Not yet implemented, but will be available soon */
 	}
 
 @mixin backgroung_linear_gradient($bglinearg11,$bglinearg12) {
@@ -36,8 +35,7 @@ body {
 		background-image: url("../images/main_baground4.jpg");
 		background-size: 100% 100%;
     background-repeat: no-repeat;
-    
-  	background-attachment: fixed;
+    background-attachment: fixed;
 	}
 
 img {
@@ -108,11 +106,15 @@ header {
    padding-top:147px;
    }
 
+#nav_mobile, #MainHeading {
+	display:none;
+	}
+
 nav {
-	padding-top:6px;
+	padding-top:1px;
 	padding-left:162px;
 	width:862px;
-	height:28px;
+	height:32px;
 	margin:0px;
 
 	background-image: url(../images/nav_background3_aut.jpg);
@@ -122,14 +124,16 @@ nav {
 		list-style:none; 
 		li { 
 			display: inline-block;
-			a {
-				height:28px;
+			a, button {
+				display:block;
+				height:27px; //28
 				margin-left:8px;
-				padding:6px;
-				font-family:helvetica;
+				margin-top:0px; //new
+				padding:3px 6px 0px 6px; /* top right bottom left */
+				font-family:arial;
 				font-size:18px; 
 				letter-spacing:2px;
-				color:#2e3132; //#3f4142
+				color:#2e3132; //was #3f4142
 				text-decoration:none;
 				@include transition(All 0.3s);
 				}
@@ -141,7 +145,7 @@ nav {
 		li:hover>ul {
 			opacity:1;
 			}
-		ul {
+		ul {     /*  Sub level ul  */
 			position:absolute;
 			top:32px;
 			/* display: block; */
@@ -164,6 +168,16 @@ nav {
 		  	}
 		  }	
 		}
+	}
+
+//link_hover and link_inactive for link active script - not functional yet
+.link_hover {
+	background: rgb(255, 255, 255); /* rollback */
+	background: rgba(255, 255, 255, .7);
+	}
+
+.link_inactive {
+	background: none;
 	}
 	
 .flag_a {
@@ -332,14 +346,10 @@ table.cv {
 .letters {
 	letter-spacing:0.8px;
 	color:black;
-	
- a {
-		
+	a {
 		text-decoration:none;
 		}	
-	
 	}
-
 
 .picture_div {
 	height:190px; 
